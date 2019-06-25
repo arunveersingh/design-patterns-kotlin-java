@@ -5,7 +5,7 @@ class TopicIterator(private val topics: Array<Topic>) : CustomIterator<Topic> {
     var currentPosition: Int = 0
 
     override fun next(): Topic{
-        currentPosition ++;
+        currentPosition ++
         return topics[currentPosition -1]
     }
 

@@ -7,7 +7,7 @@ class DirectorDesk : SupportService {
             serviceRequest.remark = "director desk solved the ticked"
             println(serviceRequest)
         }else {
-            serviceRequest.remark = "Invalid request level: ${Level.INVALID_REQUEST}"
+            serviceRequest.remark = "Invalid request level: ${Request.INVALID_REQUEST}"
             println(serviceRequest)
         }
     }

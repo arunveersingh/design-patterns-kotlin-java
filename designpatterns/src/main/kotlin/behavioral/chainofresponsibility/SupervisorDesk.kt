@@ -1,7 +1,7 @@
 package behavioral.chainofresponsibility
 
 
-class SupervisorDesk(var next: SupportService) : SupportService {
+class SupervisorDesk(private val next: SupportService) : SupportService {
 
     override fun handleRequest(serviceRequest: ServiceRequest) {
         if(serviceRequest.level == Level.TWO){

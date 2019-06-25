@@ -29,13 +29,12 @@ class IteratorTest {
             received.add(itr.next())
         }
 
-        println("--- Completed basic one ---")
-
         assert(received.size == 3)
         assert(received[0] == topic1)
         assert(received[1] == topic2)
         assert(received[2] == topic3)
 
+        println("--- assertions without Coroutine are successful ---")
 
         GlobalScope.launch {
 
@@ -45,12 +44,18 @@ class IteratorTest {
             while (itr.hasNext()) {
                 var t: Topic = itr.next();
                 received.add(t)
-                println("coroutine one --- ")
+                println("coroutine one : item iterated: $t ")
             }
 
-            println("--- Completed basic two ---")
+            assert(received.size == 3)
+            assert(received[0] == topic1)
+            assert(received[1] == topic2)
+            assert(received[2] == topic3)
+
+            println("--- assertions without Coroutine 1 are successful ---")
 
         }
+
 
         GlobalScope.launch {
 
@@ -60,15 +65,33 @@ class IteratorTest {
             while (itr.hasNext()) {
                 var t: Topic = itr.next();
                 received.add(t)
-                println("coroutine two --- ")
+                println("coroutine two : item iterated: $t ")
             }
 
-            println("--- Completed basic three ---")
+            assert(received.size == 3)
+            assert(received[0] == topic1)
+            assert(received[1] == topic2)
+            assert(received[2] == topic3)
+
+            println("--- assertions without Coroutine 2 are successful ---")
 
         }
-
-        println("--- Completed  ---")
-
-
+        runBlocking { 2300 }
     }
+
+    /**
+     * one of the sample output of coroutines part
+     *
+
+    --- assertions without Coroutine are successful ---
+    coroutine one : item iterated: Topic(name=topic1)
+    coroutine one : item iterated: Topic(name=topic2)
+    coroutine two : item iterated: Topic(name=topic1)
+    coroutine two : item iterated: Topic(name=topic2)
+    coroutine two : item iterated: Topic(name=topic3)
+    --- assertions without Coroutine 2 are successful ---
+    coroutine one : item iterated: Topic(name=topic3)
+    --- assertions without Coroutine 1 are successful ---
+
+     */
 }

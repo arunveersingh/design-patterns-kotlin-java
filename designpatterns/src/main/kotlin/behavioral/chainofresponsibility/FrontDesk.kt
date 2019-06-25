@@ -1,6 +1,6 @@
 package behavioral.chainofresponsibility
 
-class FrontDesk(val next : SupportService) : SupportService {
+class FrontDesk(private val next : SupportService) : SupportService {
 
     override fun handleRequest(serviceRequest: ServiceRequest) {
         if(serviceRequest.level == Level.ONE){
