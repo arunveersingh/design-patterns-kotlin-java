@@ -1,6 +1,6 @@
 package behavioral.iterator
 
-class TopicIterator(private val topics: Array<Topic>) : CustomIterator {
+class TopicIterator(private val topics: Array<Topic>) : CustomIterator<Topic> {
 
     var currentPosition: Int = 0
 

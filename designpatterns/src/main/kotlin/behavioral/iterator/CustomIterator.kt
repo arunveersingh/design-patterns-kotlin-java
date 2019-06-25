@@ -1,8 +1,8 @@
 package behavioral.iterator
 
-interface CustomIterator {
+interface CustomIterator<T> {
 
-    fun next(): Topic
+    fun next(): T
 
     fun hasNext(): Boolean
 
