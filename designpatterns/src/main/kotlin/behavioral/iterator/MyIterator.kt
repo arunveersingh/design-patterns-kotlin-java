@@ -1,7 +1,7 @@
 package behavioral.iterator
 
 
-interface CustomIterator<T> {
+interface MyIterator<T> {
 
     fun next(): T
 

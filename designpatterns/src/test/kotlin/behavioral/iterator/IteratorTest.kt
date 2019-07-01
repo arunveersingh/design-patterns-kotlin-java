@@ -5,14 +5,13 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Test
-import kotlin.coroutines.coroutineContext
 
 class IteratorTest {
 
     var dashBoard: DashBoard = DashBoard()
-    var topic1: Topic = Topic("topic1")
-    var topic2: Topic = Topic("topic2")
-    var topic3: Topic = Topic("topic3")
+    var topic1: Topic = Topic("topic1", "abc")
+    var topic2: Topic = Topic("topic2", "def")
+    var topic3: Topic = Topic("topic3", "ghi")
 
     @Before
     fun setup() {
@@ -22,7 +21,7 @@ class IteratorTest {
     @Test
     fun testTopicIterator() {
 
-        var itr: CustomIterator<Topic> = dashBoard.getTopicIterator()
+        var itr: MyIterator<Topic> = dashBoard.getIterator()
 
         val received = mutableListOf<Topic>()
         while (itr.hasNext()) {
@@ -38,7 +37,7 @@ class IteratorTest {
 
         GlobalScope.launch {
 
-            var itr: CustomIterator<Topic> = dashBoard.getTopicIterator()
+            var itr: MyIterator<Topic> = dashBoard.getIterator()
 
             val received = mutableListOf<Topic>()
             while (itr.hasNext()) {
@@ -52,14 +51,14 @@ class IteratorTest {
             assert(received[1] == topic2)
             assert(received[2] == topic3)
 
-            println("--- assertions without Coroutine 1 are successful ---")
+            return@launch println("--- assertions without Coroutine 1 are successful ---")
 
         }
 
 
         GlobalScope.launch {
 
-            var itr: CustomIterator<Topic> = dashBoard.getTopicIterator()
+            var itr: MyIterator<Topic> = dashBoard.getIterator()
 
             val received = mutableListOf<Topic>()
             while (itr.hasNext()) {
@@ -73,7 +72,7 @@ class IteratorTest {
             assert(received[1] == topic2)
             assert(received[2] == topic3)
 
-            println("--- assertions without Coroutine 2 are successful ---")
+            return@launch println("--- assertions without Coroutine 2 are successful ---")
 
         }
         runBlocking { 2300 }

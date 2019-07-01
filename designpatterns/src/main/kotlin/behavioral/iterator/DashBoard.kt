@@ -4,15 +4,16 @@ package behavioral.iterator
  * Aggregator
  *
  * This class aggregates the Topic in an Array.
- * DashBoard#getTopicIterator returns an objects which
+ * DashBoard#getIterator returns an objects which
  * helps in iterating the elements aggregated.
  *
  * Important thing to observe here is that Iteration logic is completely
- * in the TopicIterator. So even without having access to topics and without
+ * in the MyIteratorImpl. So even without having access to topics and without
  * knowing the underlying storage data structure we are able to iterate the elements.
  *
  */
-class DashBoard {
+class DashBoard : SupportsIterator<Topic> {
+
 
     private var topics: Array<Topic> = emptyArray()
 
@@ -22,5 +23,5 @@ class DashBoard {
         this.topics = topics
     }
 
-    fun getTopicIterator() : TopicIterator = TopicIterator(topics)
+    override fun getIterator(): MyIterator<Topic> = MyIteratorImpl(topics)
 }

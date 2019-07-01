@@ -1,10 +1,10 @@
 package behavioral.iterator
 
-class TopicIterator(private val topics: Array<Topic>) : CustomIterator<Topic> {
+class MyIteratorImpl<T>(private val topics: Array<T>) : MyIterator<T> {
 
     var currentPosition: Int = 0
 
-    override fun next(): Topic{
+    override fun next(): T {
         currentPosition ++
         return topics[currentPosition -1]
     }
