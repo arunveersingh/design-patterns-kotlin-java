@@ -1,13 +1,13 @@
 package behavioral.iterator
 
-class MyIteratorImpl<T>(private val topics: Array<T>) : MyIterator<T> {
+class MyIteratorImpl<T>(private val elements: Array<T>) : MyIterator<T> {
 
-    var currentPosition: Int = 0
+    private var currentPosition: Int = 0
 
     override fun next(): T {
         currentPosition ++
-        return topics[currentPosition -1]
+        return elements[currentPosition -1]
     }
 
-    override fun hasNext(): Boolean = currentPosition < topics.size
+    override fun hasNext(): Boolean = currentPosition < elements.size
 }
