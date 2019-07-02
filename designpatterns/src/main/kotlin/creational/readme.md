@@ -1,6 +1,6 @@
 Creational Design Patterns
 --
-_https://en.wikipedia.org/wiki/Creational_pattern_
+Used Excerpt from: _https://en.wikipedia.org/wiki/Creational_pattern_
 
 Creational design patterns deal with object creation mechanisms. 
 The basic form of object creation could result in design problems or in added complexity to the design.
