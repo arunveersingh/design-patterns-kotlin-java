@@ -1,7 +1,7 @@
 package creational.builder
 
 /**
- * @param BT Builder Type
+ * @param BT Builder Type Implementation
  * @param CT Object to be created.
  */
 interface Builder<BT, CT> {

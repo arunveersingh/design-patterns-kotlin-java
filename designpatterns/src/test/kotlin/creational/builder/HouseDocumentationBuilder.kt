@@ -1,8 +1,5 @@
 package creational.builder
 
-import creational.builder.House
-import creational.builder.HouseBuilder
-import creational.builder.HouseDocumentationBuilder
 import org.junit.Assert
 import org.junit.Test
 
