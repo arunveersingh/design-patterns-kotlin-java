@@ -61,6 +61,6 @@ class MansionHouseDocBuilder :
     override fun build(): MansionHouseDoc = details
 
     override fun buildStandard(): MansionHouseDoc {
-        return this.addRooms(15).addDoors(35).addAmphiTheater().addHelipad().addGarage().addTennisCourt().build();
+        return this.addRooms(15).addDoors(35).addAmphiTheater().addHelipad().addGarage().addTennisCourt().build()
     }
 }

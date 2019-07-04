@@ -5,10 +5,10 @@ import creational.factorymethod.docs.OldageHouseDoc
 
 class OldageHomeService {
 
-    fun getDocumentationPerAuthority() : DocumentationForAuthority {
-        val docs = OldageHouseDoc()
-        docs.addToDoc(fetchDetailsFromRemoteServer())
-        return docs.getDocumentationPerAuthority()
+    fun build() : OldageHouseDoc {
+        val doc = OldageHouseDoc()
+        doc.addToDoc(fetchDetailsFromRemoteServer())
+        return doc
     }
 
     /**
