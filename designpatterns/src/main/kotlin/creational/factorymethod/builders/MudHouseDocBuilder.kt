@@ -1,6 +1,6 @@
-package creational.factorymethod.usecaseone.builders
+package creational.factorymethod.builders
 
-import creational.factorymethod.usecaseone.docs.MudHouseDoc
+import creational.factorymethod.docs.MudHouseDoc
 
 class MudHouseDocBuilder :
     Builder<MudHouseDocBuilder, MudHouseDoc> {

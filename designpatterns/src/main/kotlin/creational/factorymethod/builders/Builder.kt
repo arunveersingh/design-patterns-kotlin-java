@@ -1,4 +1,4 @@
-package creational.factorymethod.usecaseone.builders
+package creational.factorymethod.builders
 
 interface Builder<BT, CT> {
 

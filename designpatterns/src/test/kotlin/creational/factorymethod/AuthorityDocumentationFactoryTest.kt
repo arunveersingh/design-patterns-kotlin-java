@@ -1,15 +1,19 @@
 package creational.factorymethod
 
-import creational.factorymethod.usecaseone.factory.AuthorityDocumentationFactory
-import creational.factorymethod.usecaseone.enums.HouseType
+import creational.factorymethod.factory.*
 import org.junit.Test
 
 class AuthorityDocumentationFactoryTest {
 
+    var factory : AbstractAuthorityDocumentationFactory? = null
+
     @Test
     fun `test getDocForAuthority for a Mansion`(){
+
+        factory = MansionAuthorityDocumentationFactory()
+
         assert(
-            AuthorityDocumentationFactory.Companion.getDocForAuthority(HouseType.MANSION).description
+            factory!!.getDocForAuthority().description
             .equals("===========================================\n" +
                 "This is to that this Mansion House with below details \n" +
                 "is in compliance with the Mansion Authority. \n" +
@@ -30,8 +34,11 @@ class AuthorityDocumentationFactoryTest {
 
     @Test
     fun `test getDocForAuthority for a MudHouse`(){
+
+        factory = MudAuthorityDocumentationFactory()
+
         assert(
-            AuthorityDocumentationFactory.Companion.getDocForAuthority(HouseType.MUD).description
+            factory!!.getDocForAuthority().description
             .equals("===========================================\n" +
                     " This is to that this Mud House with below details \n" +
                     "is in compliance with the MudHouse Authority. \n" +
@@ -48,8 +55,11 @@ class AuthorityDocumentationFactoryTest {
 
     @Test
     fun `test getDocForAuthority for a MultiStoreyHouse`(){
+
+        factory = MultiStoreyAuthorityDocumentationFactory()
+
         assert(
-            AuthorityDocumentationFactory.Companion.getDocForAuthority(HouseType.MULTISTOREY).description
+            factory!!.getDocForAuthority().description
             .equals("===========================================\n" +
                     " This is to certify that this MultiStorey House with below details \n" +
                     "is in compliance with the MultiHouse Authority. \n" +
@@ -69,8 +79,11 @@ class AuthorityDocumentationFactoryTest {
 
     @Test
     fun `test getDocForAuthority for an OldAgeHouse`(){
+
+        factory = OldAgeAuthorityDocumentationFactory()
+
         assert(
-            AuthorityDocumentationFactory.Companion.getDocForAuthority(HouseType.OLDAGE).description
+            factory!!.getDocForAuthority().description
                 .equals("===========================================\n" +
                         " This is to certify that this MultiStorey House with below details \n" +
                         "is in compliance with the MultiHouse Authority. \n" +

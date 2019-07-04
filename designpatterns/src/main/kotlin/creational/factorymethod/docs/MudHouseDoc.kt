@@ -1,4 +1,4 @@
-package creational.factorymethod.usecaseone.docs
+package creational.factorymethod.docs
 
 class MudHouseDoc : AbstractHouseDoc() {
 

@@ -1,6 +1,6 @@
-package creational.factorymethod.usecaseone.builders
+package creational.factorymethod.builders
 
-import creational.factorymethod.usecaseone.docs.MansionHouseDoc
+import creational.factorymethod.docs.MansionHouseDoc
 
 class MansionHouseDocBuilder :
     Builder<MansionHouseDocBuilder, MansionHouseDoc> {
