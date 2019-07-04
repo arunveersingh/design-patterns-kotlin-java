@@ -72,6 +72,7 @@ fun main(){
             hasSwimmingPool = true,
             hasHelipad = true,
             hasGarden = true,
+            hasPartyHall = false,
             hasAmphitheatre = true,
             hasTennisCourt = true
         )

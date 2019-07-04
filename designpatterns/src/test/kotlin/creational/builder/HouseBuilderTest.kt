@@ -23,6 +23,8 @@ class HouseBuilderTest {
             .addTennisCourt()
             .addHelipad()
             .addSwimmingPool()
+            .addHelipad()
+            .addGarden()
             .build()
 
         Assert.assertEquals(house.roomsList.size, 4)

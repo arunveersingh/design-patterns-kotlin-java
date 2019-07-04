@@ -2,7 +2,7 @@ package creational.builder
 
 import creational.builder.buildingblocks.*
 
-class House() {
+class House {
     val roomsList: MutableList<Room> = mutableListOf()
     val doorsList: MutableList<Door> = mutableListOf()
     val windowsList: MutableList<Window> = mutableListOf()
