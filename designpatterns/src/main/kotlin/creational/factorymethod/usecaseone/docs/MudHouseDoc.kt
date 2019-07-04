@@ -10,15 +10,16 @@ class MudHouseDoc : AbstractHouseDoc() {
 
     override fun getDocumentationPerAuthority() : DocumentationForAuthority {
         return DocumentationForAuthority(
-            " This is to that this Mud House with below details /n" +
-                    "is in compliance with the MudHouse Authority. /n" +
-                    "-------------------------------------------------/n" +
-                    "$documentation /n" +
-                    "-------------------------------------------------/n" +
-                    "                                                 /n" +
-                    "                                                 /n" +
-                    "Signing Authority                                /n" +
-                    "Date /n" +
+            "===========================================\n" +
+                    " This is to that this Mud House with below details \n" +
+                    "is in compliance with the MudHouse Authority. \n" +
+                    "-------------------------------------------------\n" +
+                    "$documentation \n" +
+                    "-------------------------------------------------\n" +
+                    "                                                 \n" +
+                    "                                                 \n" +
+                    "Signing Authority                                \n" +
+                    "Date \n" +
                     ""
         )
     }

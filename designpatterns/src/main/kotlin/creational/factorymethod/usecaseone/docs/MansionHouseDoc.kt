@@ -10,15 +10,16 @@ class MansionHouseDoc : AbstractHouseDoc() {
 
     override fun getDocumentationPerAuthority() : DocumentationForAuthority {
         return DocumentationForAuthority(
-            " This is to that this Mansion House with below details /n" +
-                    "is in compliance with the Mansion Authority. /n" +
-                    "-------------------------------------------------/n" +
-                    "$documentation /n" +
-                    "-------------------------------------------------/n" +
-                    "                                                 /n" +
-                    "                                                 /n" +
-                    "Signing Authority                                /n" +
-                    "Date /n" +
+            "===========================================\n" +
+                    "This is to that this Mansion House with below details \n" +
+                    "is in compliance with the Mansion Authority. \n" +
+                    "-------------------------------------------------\n" +
+                    "$documentation \n" +
+                    "-------------------------------------------------\n" +
+                    "                                                 \n" +
+                    "                                                 \n" +
+                    "Signing Authority                                \n" +
+                    "Date \n" +
                     ""
         )
     }
