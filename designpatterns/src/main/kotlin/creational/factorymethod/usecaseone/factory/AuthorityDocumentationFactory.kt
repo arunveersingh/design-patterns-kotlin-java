@@ -19,9 +19,3 @@ class AuthorityDocumentationFactory {
     }
 
 }
-
-fun main() {
-   /* println(AuthorityDocumentationFactory().getDocForAuthority(HouseType.MANSION).description)
-    println(AuthorityDocumentationFactory().getDocForAuthority(HouseType.MULTISTOREY).description)
-    println(AuthorityDocumentationFactory().getDocForAuthority(HouseType.MUD).description)*/
-}
