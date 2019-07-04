@@ -1,4 +1,4 @@
-[Excerpts from Wikipedia]
+[Excerpt from Wikipedia]
 
 Chain Of Responsibility
 --
