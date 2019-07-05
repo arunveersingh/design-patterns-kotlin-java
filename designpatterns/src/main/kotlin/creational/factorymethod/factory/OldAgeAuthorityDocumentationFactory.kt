@@ -1,9 +1,9 @@
 package creational.factorymethod.factory
 
 import creational.factorymethod.docs.DocumentationForAuthority
-import creational.factorymethod.service.OldageHomeService
+import creational.factorymethod.service.OldAgeHouseService
 
 class OldAgeAuthorityDocumentationFactory : AbstractAuthorityDocumentationFactory() {
     override fun getDocForAuthority(): DocumentationForAuthority =
-        OldageHomeService().build().getDocumentationPerAuthority()
+        OldAgeHouseService().build().getDocumentationPerAuthority()
 }

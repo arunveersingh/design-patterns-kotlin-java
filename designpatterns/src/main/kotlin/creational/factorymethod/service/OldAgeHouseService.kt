@@ -3,7 +3,7 @@ package creational.factorymethod.service
 import creational.factorymethod.docs.DocumentationForAuthority
 import creational.factorymethod.docs.OldageHouseDoc
 
-class OldageHomeService {
+class OldAgeHouseService {
 
     fun build() : OldageHouseDoc {
         val doc = OldageHouseDoc()
