@@ -11,7 +11,7 @@ Can talk about
 
     (An adapter can be used when the wrapper must respect a particular interface and must support polymorphic behavior.)
 
-2. Composition
+2. Composition vs Aggregation
 
 3. Inheritance
 
