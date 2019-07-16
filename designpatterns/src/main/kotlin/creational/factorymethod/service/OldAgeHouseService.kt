@@ -1,6 +1,5 @@
 package creational.factorymethod.service
 
-import creational.factorymethod.docs.DocumentationForAuthority
 import creational.factorymethod.docs.OldageHouseDoc
 
 class OldAgeHouseService {

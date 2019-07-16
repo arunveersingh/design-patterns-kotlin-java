@@ -23,5 +23,6 @@ class DashBoard : SupportsIterator<Topic> {
         this.topics = topics
     }
 
-    override fun getIterator(): MyIterator<Topic> = MyIteratorImpl(topics)
+    override fun getIterator(): MyIterator<Topic> =
+        MyIteratorImpl(topics)
 }

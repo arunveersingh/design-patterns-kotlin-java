@@ -2,5 +2,5 @@ package behavioral.iterator
 
 interface SupportsIterator<T> {
 
-    fun getIterator() :MyIterator<T>
+    fun getIterator() : MyIterator<T>
 }
