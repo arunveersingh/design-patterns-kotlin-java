@@ -1,4 +1,4 @@
-package creational.factorymethod_backup
+package creational.factorymethod
 
 import creational.factorymethod.factory.*
 import org.junit.Test
